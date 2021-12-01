@@ -34,8 +34,6 @@ const Works = () => {
     <>
       {/* <!-- Works Area --> */}
       <Section className="position-relative">
-
-        hi
         <Container>
           <Box mb="2.5rem" ml="-1.75rem">
             <ListNav className="nav">
