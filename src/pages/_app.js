@@ -5,6 +5,7 @@ import { ChakraProvider } from '@chakra-ui/react';
 import "../assets/fonts/icon-font/fonts/avasta.ttf";
 import "../assets/fonts/icon-font/fonts/Grayic.ttf";
 import "../assets/fonts/icon-font/css/style.css";
+import 'tailwindcss/tailwind.css'
 
 import "../components/Layout/bootstrap-custom.scss";
 import "../../node_modules/slick-carousel/slick/slick.css";
@@ -16,9 +17,9 @@ import "../assets/fonts/icon-font/css/style.css";
 const MyApp = ({ Component, pageProps, router }) => {
   if (router.pathname.match(/reset|coming/)) {
     return (
-        <ChakraProvider>
-            <Component {...pageProps} />
-        </ChakraProvider>,
+      <ChakraProvider>
+        <Component {...pageProps} />
+      </ChakraProvider>,
       <GlobalProvider>
         <Layout pageContext={{ layout: "bare" }}>
           <Component {...pageProps} />

@@ -1,17 +1,17 @@
 import React from 'react';
-import {BiLeftArrowAlt, BiRightArrowAlt} from 'react-icons/bi';
-import {Box, Heading, IconButton, useBreakpointValue, VStack} from "@chakra-ui/react";
+import { BiLeftArrowAlt, BiRightArrowAlt } from 'react-icons/bi';
+import { Box, Heading, IconButton, useBreakpointValue, VStack } from "@chakra-ui/react";
 import Slider from 'react-slick';
 import Card from "../Card";
 // import Text from "antd/es/typography/Text";
 
 
-const Index = ({comps, length, title, subTitle}) => {
+const Index = ({ comps, length, title, subTitle }) => {
     const [slider, setSlider] = React.useState(null)
     console.log("COmps ", comps.length)
     // Settings for the slider
     const settings = {
-        dots: false,
+        dots: true,
         arrows: false,
         infinite: true,
         autoplay: true,
@@ -98,7 +98,7 @@ const Index = ({comps, length, title, subTitle}) => {
                     transform={'translate(0%, -50%)'}
                     zIndex={2}
                     onClick={() => slider?.slickPrev()}>
-                    <BiLeftArrowAlt size="30px" color={"#0092ef"}/>
+                    <BiLeftArrowAlt size="30px" color={"#0092ef"} />
                 </IconButton>
                 {/* Right Icon */}
                 <IconButton
@@ -110,9 +110,9 @@ const Index = ({comps, length, title, subTitle}) => {
                     transform={'translate(0%, -50%)'}
                     zIndex={2}
                     onClick={() => slider?.slickNext()}>
-                    <BiRightArrowAlt size="30px" color={"#0092ef"}/>
+                    <BiRightArrowAlt size="30px" color={"#0092ef"} />
                 </IconButton>
-                <div style={{width: "90%", margin: 'auto'}}>
+                <div style={{ width: "90%", margin: 'auto' }}>
                     {/* Slider */}
                     <Slider {...settings} ref={(slider) => setSlider(slider)}>
                         {

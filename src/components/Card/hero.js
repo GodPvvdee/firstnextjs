@@ -16,8 +16,8 @@ const ImgRight = styled.img`
 const Hero = () => {
     return (
         <>
-            <div className="position-relative" style={{marginLeft: '100px',marginRight:'100px'}}>
-                <ImgRight src={imgHeader} alt="" />
+            <div className="position-relative" style={{ marginLeft: '100px', marginRight: '100px' }}>
+                <ImgRight src={imgHeader} alt="abc" />
             </div>
             {/* <!-- Hero Area --> */}
         </>
