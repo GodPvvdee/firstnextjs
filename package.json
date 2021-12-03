@@ -9,10 +9,15 @@
     "export": "next build && next export"
   },
   "dependencies": {
+    "@chakra-ui/icons": "^1.1.1",
+    "@chakra-ui/react": "^1.7.2",
+    "@emotion/react": "^11",
+    "@emotion/styled": "^11",
     "@n8tb1t/use-scroll-position": "^1.0.43",
     "@nextui-org/react": "^1.0.1-alpha.57",
     "aos": "^3.0.0-beta.6",
     "bootstrap": "^4.5.0",
+    "framer-motion": "^4",
     "google-map-react": "^1.1.7",
     "lodash": "^4.17.15",
     "next": "^10.0.1",

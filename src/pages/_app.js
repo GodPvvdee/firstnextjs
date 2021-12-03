@@ -1,7 +1,7 @@
 // import App from 'next/app'
 import Layout from "../components/Layout";
 import { GlobalProvider } from "../context/GlobalContext";
-
+import { ChakraProvider } from '@chakra-ui/react';
 import "../assets/fonts/icon-font/fonts/avasta.ttf";
 import "../assets/fonts/icon-font/fonts/Grayic.ttf";
 import "../assets/fonts/icon-font/css/style.css";
@@ -16,6 +16,9 @@ import "../assets/fonts/icon-font/css/style.css";
 const MyApp = ({ Component, pageProps, router }) => {
   if (router.pathname.match(/reset|coming/)) {
     return (
+        <ChakraProvider>
+            <Component {...pageProps} />
+        </ChakraProvider>,
       <GlobalProvider>
         <Layout pageContext={{ layout: "bare" }}>
           <Component {...pageProps} />
@@ -25,6 +28,7 @@ const MyApp = ({ Component, pageProps, router }) => {
   }
 
   return (
+
     <GlobalProvider>
       <Layout pageContext={{}}>
         <Component {...pageProps} />

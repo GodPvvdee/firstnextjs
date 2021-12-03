@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Container } from "react-bootstrap";
 import { useScrollPosition } from "@n8tb1t/use-scroll-position";
 import Link from "next/link";
-
+import Chero from "../../components/Card/hero";
 import GlobalContext from "../../context/GlobalContext";
 import Offcanvas from "../Offcanvas";
 import NestedMenu from "../NestedMenu";
@@ -35,7 +35,6 @@ const SiteHeader = styled.header`
       background: rgb(45,133,192);
       background: linear-gradient(
           45deg, rgba(45,133,192,1) 0%, rgba(18,87,151,1) 24%, rgba(35,115,176,1) 24%, rgba(17,119,175,1) 61%, rgba(33,139,193,1) 61%, rgba(88,204,255,1) 100%);
-
     }
   }
 `;
@@ -67,9 +66,7 @@ const Menu = styled.ul`
         padding-bottom: 18px !important;
         padding-left: 18px !important;
         padding-right: 18px !important;
-
         text-transform: uppercase;
-
         &.dropdown-toggle:after {
           margin-left: 10px;
           position: relative;
@@ -229,9 +226,11 @@ const Header = ({ isDark }) => {
       setShowReveal(false);
     }
   });
-
   return (
     <>
+      <div className="">
+      {/*<Chero/>*/}
+      </div>
       <SiteHeader
         className={`sticky-header ${showScrolling ? "scrolling" : ""} ${
           showReveal ? "reveal-header" : ""
@@ -245,6 +244,7 @@ const Header = ({ isDark }) => {
               <Logo/>
             {/*</div>*/}
             <div className="collapse navbar-collapse">
+
               <div className="navbar-nav ml-lg-auto mr-3">
                 <Menu
                   className="navbar-nav d-none d-lg-flex"

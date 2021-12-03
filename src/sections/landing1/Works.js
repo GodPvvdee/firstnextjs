@@ -1,9 +1,16 @@
 import React, { useState, useEffect } from "react";
+
 import { Container, Col } from "react-bootstrap";
 import Masonry from "react-masonry-component";
 import { Section, Box, ListNav } from "../../components/Core";
 import WorkCard from "../../components/WorkCard";
 import { designWorks1 } from "../../data";
+import Card from "../../components/Card";
+import Slider from "../../components/Slider"
+import imgHeader from "../../assets/image/webp/head.svg";
+import Chero from "../../components/Card/hero";
+// const chero = [<Chero/>,<Chero/>,<Chero/>]
+const cards = [<Card/>, <Card/>, <Card/>, <Card/>, <Card/>, <Card/>, <Card/>, <Card/>]
 const Works = () => {
   const [items, setItems] = useState([]);
   const [activeLink, setActiveLink] = useState("*");
@@ -11,7 +18,6 @@ const Works = () => {
   useEffect(() => {
     setItems(designWorks1);
   }, []);
-
 
   const filterBy = (cat) => {
     if (cat === "*") {
@@ -33,6 +39,18 @@ const Works = () => {
   return (
     <>
       {/* <!-- Works Area --> */}
+
+      {/*<div style={{maxWidth: '1920px', justifyContent: 'center', margin: 'auto',marginLeft:'100px',marginRight:'100px'}}>*/}
+      {/*  <div className="flexCenter">*/}
+      {/*    <Slider comps={chero} length={1}  title={'test'}/>*/}
+      {/*  </div>*/}
+      {/*</div>*/}
+      <div style={{maxWidth: '1920px', justifyContent: 'center', margin: 'auto',marginLeft:'100px',marginRight:'100px'}}>
+        <div className="flexCenter">
+          <Slider comps={cards} length={5}  title={'Бүтээгдэхүүн'}/>
+        </div>
+      </div>
+
       <Section className="position-relative">
         <Container>
           <Box mb="2.5rem" ml="-1.75rem">
@@ -47,7 +65,7 @@ const Works = () => {
                     filterBy("*");
                   }}
                 >
-                  All works
+                  Бүх ажилууд
                 </a>
               </li>
               <li className="nav-item">
@@ -60,7 +78,7 @@ const Works = () => {
                     filterBy("branding");
                   }}
                 >
-                  Branding
+                  Бренд
                 </a>
               </li>
               <li className="nav-item">
@@ -73,7 +91,7 @@ const Works = () => {
                     filterBy("ux-design");
                   }}
                 >
-                  UX Design
+               дизайн
                 </a>
               </li>
               <li className="nav-item">
@@ -86,7 +104,7 @@ const Works = () => {
                     filterBy("photography");
                   }}
                 >
-                  Photography
+                  График
                 </a>
               </li>
             </ListNav>
