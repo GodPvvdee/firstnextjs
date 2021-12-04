@@ -7,7 +7,7 @@ import WorkCard from "../../components/WorkCard";
 import { designWorks1 } from "../../data";
 import Card from "../../components/Card";
 import Slider from "../../components/Slider";
-import imgHeader from "../../assets/image/webp/head.svg";
+import imgHeader from "../../assets/image/webp/head.svg"
 import cityImg from "../../assets/image/jpg/city.jpg";
 import LogoImg from "../../assets/image/jpg/logo.jpg";
 import Chero from "../../components/Card/hero";
