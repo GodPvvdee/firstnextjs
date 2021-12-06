@@ -6,11 +6,17 @@ import { Section, Box, ListNav } from "../../components/Core";
 import WorkCard from "../../components/WorkCard";
 import { designWorks1 } from "../../data";
 import Card from "../../components/Card";
-import Slider from "../../components/Slider"
-import imgHeader from "../../assets/image/webp/head.svg";
+import Slider from "../../components/Slider";
+import imgHeader from "../../assets/image/webp/head.svg"
+import cityImg from "../../assets/image/jpg/city.jpg";
+import LogoImg from "../../assets/image/jpg/logo.jpg";
 import Chero from "../../components/Card/hero";
+import { Center } from "@chakra-ui/layout";
+import Partner from '../../components/PartnersSlider/Partner'
+
 // const chero = [<Chero/>,<Chero/>,<Chero/>]
-const cards = [<Card/>, <Card/>, <Card/>, <Card/>, <Card/>, <Card/>, <Card/>, <Card/>]
+const cards = [<Card />, <Card />, <Card />, <Card />, <Card />, <Card />, <Card />, <Card />];
+const logos = [LogoImg, LogoImg, LogoImg, LogoImg, LogoImg, LogoImg];
 const Works = () => {
   const [items, setItems] = useState([]);
   const [activeLink, setActiveLink] = useState("*");
@@ -37,7 +43,7 @@ const Works = () => {
   };
 
   return (
-    <>
+    <div style={{ backgroundColor: "#e6e6e6" }}>
       {/* <!-- Works Area --> */}
 
       {/*<div style={{maxWidth: '1920px', justifyContent: 'center', margin: 'auto',marginLeft:'100px',marginRight:'100px'}}>*/}
@@ -45,9 +51,41 @@ const Works = () => {
       {/*    <Slider comps={chero} length={1}  title={'test'}/>*/}
       {/*  </div>*/}
       {/*</div>*/}
-      <div style={{maxWidth: '1920px', justifyContent: 'center', margin: 'auto',marginLeft:'100px',marginRight:'100px'}}>
+      <div
+        style={{
+          maxWidth: "1920px",
+          justifyContent: "center",
+          margin: "auto",
+          marginLeft: "100px",
+          marginRight: "100px",
+        }}
+      >
         <div className="flexCenter">
-          <Slider comps={cards} length={5}  title={'Бүтээгдэхүүн'}/>
+          <Slider comps={cards} length={5} title={"Бүтээгдэхүүн"} />
+        </div>
+      </div>
+
+      <img src={cityImg} className="my-4" />
+
+      <Center>
+        <div className="grid grid-cols-3 gap-8">
+          <Card />
+          <Card />
+          <Card />
+        </div>
+      </Center>
+
+      <div
+        style={{
+          maxWidth: "1920px",
+          justifyContent: "center",
+          margin: "auto",
+          marginLeft: "100px",
+          marginRight: "100px",
+        }}
+      >
+        <div className="flexCenter">
+          <Partner comps={logos} length={8} />
         </div>
       </div>
 
@@ -57,9 +95,8 @@ const Works = () => {
             <ListNav className="nav">
               <li className="nav-item">
                 <a
-                  className={`nav-link font-weight-bold text-uppercase ${
-                    activeLink === "*" ? "active" : null
-                  }`}
+                  className={`nav-link font-weight-bold text-uppercase ${activeLink === "*" ? "active" : null
+                    }`}
                   onClick={(e) => {
                     e.preventDefault();
                     filterBy("*");
@@ -70,9 +107,8 @@ const Works = () => {
               </li>
               <li className="nav-item">
                 <a
-                  className={`nav-link font-weight-bold text-uppercase ${
-                    activeLink === "branding" ? "active" : null
-                  }`}
+                  className={`nav-link font-weight-bold text-uppercase ${activeLink === "branding" ? "active" : null
+                    }`}
                   onClick={(e) => {
                     e.preventDefault();
                     filterBy("branding");
@@ -83,22 +119,20 @@ const Works = () => {
               </li>
               <li className="nav-item">
                 <a
-                  className={`nav-link font-weight-bold text-uppercase ${
-                    activeLink === "ux-design" ? "active" : null
-                  }`}
+                  className={`nav-link font-weight-bold text-uppercase ${activeLink === "ux-design" ? "active" : null
+                    }`}
                   onClick={(e) => {
                     e.preventDefault();
                     filterBy("ux-design");
                   }}
                 >
-               дизайн
+                  дизайн
                 </a>
               </li>
               <li className="nav-item">
                 <a
-                  className={`nav-link font-weight-bold text-uppercase ${
-                    activeLink === "photography" ? "active" : null
-                  }`}
+                  className={`nav-link font-weight-bold text-uppercase ${activeLink === "photography" ? "active" : null
+                    }`}
                   onClick={(e) => {
                     e.preventDefault();
                     filterBy("photography");
@@ -124,7 +158,7 @@ const Works = () => {
           </Masonry>
         </Container>
       </Section>
-    </>
+    </div>
   );
 };
 

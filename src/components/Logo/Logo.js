@@ -11,8 +11,8 @@ const ImgRight = styled.img`
 const Logo = ({ color = "front", height, className = "", ...rest }) => {
   return (
     <Link href="/">
-      <a className={`${className}`} {...rest} style={{marginLeft: '200px'}}>
-          <Image src={imgLogo} alt={"logo"} layout={"fixed"} width={100} height={80} />
+      <a className={`${className}`} {...rest} style={{ marginLeft: '200px' }}>
+        <Image src={imgLogo} alt={"logo"} layout={"fixed"} width={100} height={80} />
       </a>
     </Link>
   );

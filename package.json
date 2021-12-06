@@ -4,13 +4,14 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "start": "craco start",
+    "build": "craco build",
     "export": "next build && next export"
   },
   "dependencies": {
     "@chakra-ui/icons": "^1.1.1",
     "@chakra-ui/react": "^1.7.2",
+    "@craco/craco": "^6.4.2",
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
     "@n8tb1t/use-scroll-position": "^1.0.43",
@@ -39,8 +40,11 @@
     "styled-system": "^5.1.5"
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.0",
     "babel-plugin-styled-components": "^1.10.7",
     "imagemin-mozjpeg": "^9.0.0",
-    "next-optimized-images": "^2.6.1"
+    "next-optimized-images": "^2.6.1",
+    "postcss": "^8.4.4",
+    "tailwindcss": "^2.2.19"
   }
 }
