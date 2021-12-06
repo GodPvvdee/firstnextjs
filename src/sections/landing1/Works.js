@@ -14,7 +14,7 @@ import Chero from "../../components/Card/hero";
 import { Center } from "@chakra-ui/layout";
 import Partner from '../../components/PartnersSlider/Partner'
 
-// const chero = [<Chero/>,<Chero/>,<Chero/>]
+const chero = [<Chero />, <Chero />, <Chero />]
 const cards = [<Card />, <Card />, <Card />, <Card />, <Card />, <Card />, <Card />, <Card />];
 const logos = [LogoImg, LogoImg, LogoImg, LogoImg, LogoImg, LogoImg];
 const Works = () => {
@@ -46,11 +46,11 @@ const Works = () => {
     <div style={{ backgroundColor: "#e6e6e6" }}>
       {/* <!-- Works Area --> */}
 
-      {/*<div style={{maxWidth: '1920px', justifyContent: 'center', margin: 'auto',marginLeft:'100px',marginRight:'100px'}}>*/}
-      {/*  <div className="flexCenter">*/}
-      {/*    <Slider comps={chero} length={1}  title={'test'}/>*/}
-      {/*  </div>*/}
-      {/*</div>*/}
+      <div style={{ maxWidth: '1920px', justifyContent: 'center', margin: 'auto', marginLeft: '100px', marginRight: '100px' }}>
+        <div className="flexCenter">
+          <Slider comps={chero} length={1} title={'test'} />
+        </div>
+      </div>
       <div
         style={{
           maxWidth: "1920px",
@@ -75,19 +75,7 @@ const Works = () => {
         </div>
       </Center>
 
-      <div
-        style={{
-          maxWidth: "1920px",
-          justifyContent: "center",
-          margin: "auto",
-          marginLeft: "100px",
-          marginRight: "100px",
-        }}
-      >
-        <div className="flexCenter">
-          <Partner comps={logos} length={8} />
-        </div>
-      </div>
+
 
       <Section className="position-relative">
         <Container>
