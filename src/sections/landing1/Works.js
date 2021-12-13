@@ -7,14 +7,15 @@ import WorkCard from "../../components/WorkCard";
 import { designWorks1 } from "../../data";
 import Card from "../../components/Card";
 import Slider from "../../components/Slider";
-import imgHeader from "../../assets/image/webp/head.svg"
+import imgHeader from "../../assets/image/webp/head.svg";
 import cityImg from "../../assets/image/jpg/city.jpg";
 import LogoImg from "../../assets/image/jpg/logo.jpg";
 import Chero from "../../components/Card/hero";
 import { Center } from "@chakra-ui/layout";
-import Partner from '../../components/PartnersSlider/Partner'
+import Partner from "../../components/PartnersSlider/Partner";
+import Footer from "../../components/Footer/Footer";
 
-const chero = [<Chero />, <Chero />, <Chero />]
+const chero = [<Chero />, <Chero />, <Chero />];
 const cards = [<Card />, <Card />, <Card />, <Card />, <Card />, <Card />, <Card />, <Card />];
 const logos = [LogoImg, LogoImg, LogoImg, LogoImg, LogoImg, LogoImg];
 const Works = () => {
@@ -41,16 +42,10 @@ const Works = () => {
   const masonryOptions = {
     transitionDuration: 1000,
   };
-
   return (
     <div style={{ backgroundColor: "#e6e6e6" }}>
       {/* <!-- Works Area --> */}
 
-      <div style={{ maxWidth: '1920px', justifyContent: 'center', margin: 'auto', marginLeft: '100px', marginRight: '100px' }}>
-        <div className="flexCenter">
-          <Slider comps={chero} length={1} title={'test'} />
-        </div>
-      </div>
       <div
         style={{
           maxWidth: "1920px",
@@ -75,16 +70,15 @@ const Works = () => {
         </div>
       </Center>
 
-
-
       <Section className="position-relative">
         <Container>
           <Box mb="2.5rem" ml="-1.75rem">
             <ListNav className="nav">
               <li className="nav-item">
                 <a
-                  className={`nav-link font-weight-bold text-uppercase ${activeLink === "*" ? "active" : null
-                    }`}
+                  className={`nav-link font-weight-bold text-uppercase ${
+                    activeLink === "*" ? "active" : null
+                  }`}
                   onClick={(e) => {
                     e.preventDefault();
                     filterBy("*");
@@ -95,8 +89,9 @@ const Works = () => {
               </li>
               <li className="nav-item">
                 <a
-                  className={`nav-link font-weight-bold text-uppercase ${activeLink === "branding" ? "active" : null
-                    }`}
+                  className={`nav-link font-weight-bold text-uppercase ${
+                    activeLink === "branding" ? "active" : null
+                  }`}
                   onClick={(e) => {
                     e.preventDefault();
                     filterBy("branding");
@@ -107,8 +102,9 @@ const Works = () => {
               </li>
               <li className="nav-item">
                 <a
-                  className={`nav-link font-weight-bold text-uppercase ${activeLink === "ux-design" ? "active" : null
-                    }`}
+                  className={`nav-link font-weight-bold text-uppercase ${
+                    activeLink === "ux-design" ? "active" : null
+                  }`}
                   onClick={(e) => {
                     e.preventDefault();
                     filterBy("ux-design");
@@ -119,8 +115,9 @@ const Works = () => {
               </li>
               <li className="nav-item">
                 <a
-                  className={`nav-link font-weight-bold text-uppercase ${activeLink === "photography" ? "active" : null
-                    }`}
+                  className={`nav-link font-weight-bold text-uppercase ${
+                    activeLink === "photography" ? "active" : null
+                  }`}
                   onClick={(e) => {
                     e.preventDefault();
                     filterBy("photography");
@@ -146,6 +143,7 @@ const Works = () => {
           </Masonry>
         </Container>
       </Section>
+      {/* <Footer /> */}
     </div>
   );
 };

@@ -5,6 +5,7 @@ import { ChakraProvider } from '@chakra-ui/react';
 import "../assets/fonts/icon-font/fonts/avasta.ttf";
 import "../assets/fonts/icon-font/fonts/Grayic.ttf";
 import "../assets/fonts/icon-font/css/style.css";
+import '.././style/header.css'
 import 'tailwindcss/tailwind.css'
 
 import "../components/Layout/bootstrap-custom.scss";
