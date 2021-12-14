@@ -1,5 +1,4 @@
 import { GrFacebook, GrYoutube, GrTwitter } from "react-icons/gr";
-import Iframe from "./Iframe";
 
 const Footer = (props) => {
   const iframe = (

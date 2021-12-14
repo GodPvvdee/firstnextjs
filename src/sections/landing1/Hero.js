@@ -9,21 +9,18 @@ import { device } from "../../utils";
 import imgL from "../../assets/image/png/portrait-1.png";
 import imgHeader from "../../assets/image/webp/head.svg";
 
-
 const ImgRight = styled.img`
   max-width: 100%;
 `;
 const Hero = () => {
-  const chero = [<Chero />, <Chero />, <Chero />]
+  const chero = [<Chero />, <Chero />, <Chero />];
   return (
     <>
-
-      <div style={{ backgroundColor: "#e6e6e6", display: 'flex', justifyContent: 'center' }}>
-        <div className="" style={{ width: '90%' }}>
+      <div style={{ backgroundColor: "#e6e6e6", display: "flex", justifyContent: "center" }}>
+        <div className="" style={{ width: "90%" }}>
           <ImgRight src={imgHeader} alt="abc" />
         </div>
       </div>
-
     </>
   );
 };
